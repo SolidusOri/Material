@@ -1,0 +1,21 @@
+- git help (opcional el nombre del comando)
+- config --global -e | (archivo de congiguracion, aqui podemos ver el usuario o alias), para salir de este archivo :qENTER
+- git init | este comando crea un nuevo repositorio local en la ruta donde se ejecute, este crea una carpeta que no podemos ver
+- git status | -s (nos muestra de forma mas reducida los archivos que se modificaron y que estan o no en el stage) | -b (muestra la rama donde estamos)
+- git add .  | con este comando le indicamos a git que queremos que este atento a los cambios en todos los archivos, tambien se puede excluir por estension | git add *.png | con forder/ se agrega al stage todo lo que tiene dicho folder | git add -A agrega todo lo que se modifico
+- git commit -m "Primer commit"| (captura como se encuentra el proyecto en este momento) | -am lo agrega al stage y hace el commit
+- git checkout -- . | regresa todo el proyecto al ultimo commit (incluso si se borra la papelera y todo) | con -- nombreArchivo se pueden revertir los cambios a este
+- git log | muestra los commit realizados
+- git reset *.xml | excluye archivos del stage
+- git config --global alias.lg "log --oneline --decorate --all --graph" | creamos un alias o shorcut para un comando el cual lo utilizaremos despues como git lg
+- git diff | busca diferencia en los archivos con el commit
+- git diff HEAD README.md | hace el diff entre los archivos antes del add(agregarlos al stage)
+- git commit --amend -m "Actualizamos el README" | actualizamos el mensaje del ultimo commit
+- git reset --soft HEAD^ | con esto dejamos los cambios en el ultimo commit
+- git config core.autocrlf true | quita el warning que aparece cuando hacemos el add
+- git mv nombreactual.txt nuevonombre.txt | sirve para mover y cambiar nombre a un archivo
+- git rm nombrearchivo.txt | remueve el archivo
+- git add -u | actualizar todo
+- git tag -a v0.0.1 -m "mensaje" | crea el tag
+- git tag | lista los tags creados
+- git push --tags | hace el push de el tag

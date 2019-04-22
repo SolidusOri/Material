@@ -1,0 +1,33 @@
+Para subir un proyecto a git
+
+1. iniciar git
+comando : git init
+
+2. revisar los archivos (en rojo no estan cargados)
+comando : git status
+
+3. preparar los archivos de forma local (deberian verse en verde con un git status)
+comando : git add .
+
+4. preparar la carga para git
+comando : git commit -m "Primer commit"
+
+5. crear repositorio en git
+
+6. pegar el directorio que me entraga git en la consola
+
+7. cagar los archivos a git
+comando : git push -u origin master
+
+-- Opcional
+
+8. crear la version
+comando : git tag -a v1.0.0 -m "Primera version"
+
+9. revisar si se creo la version
+comando : git tag
+
+10. cargar la version a git
+comando : git push --tags
+
+11. revisar que todo este bien en la pagina de git

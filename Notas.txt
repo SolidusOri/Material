@@ -1,0 +1,7 @@
+git pull, este comando nos sirve para bajar los cambios que tenga el proyecto en github al nuestro equipo local y automaticamente intenta hacer un merge
+
+git fetch, este comando nos actualizara localmente los cambios que hayan en el servidor de github, pero no hara el merge
+
+** realizar un fetch o un pull es una buena practica antes de subir nuestros cambios **
+
+git clone url nombre_carpeta, este comando nos sirve para clonar un repositorio de git hub cuando hay un nuevo equipo de trabajo

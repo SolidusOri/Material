@@ -1,0 +1,5 @@
+git push heroku master| sube el proyecto a heroku
+heroku config| lista las variables de entorno de heroku
+heroku config:set nombreVariable=valorVariable| crea una nueva variable en heroku, accesible desde el process.env
+heroku config:get nombreVariable| muestra el valor
+heroku config:unset nombreVariable| elimina la variable

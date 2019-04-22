@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <h1>Hola Mundo</h1>
+        <div style="color:red;">
+            El DOM es la representacion del HTML en el navegador
+        </div>
+        <div style="background-color: yellow">
+            Explorando el DOM
+        </div>
+
+        <script>
+            console.log('esta es la consola');
+        </script>
+
+        <script>
+            var nombre = 'Robinson';
+            console.log(nombre);
+        </script>
+
+        <script>
+            //1. pasar de horas a segundos
+            var horas = 3;
+            var segundos = horas * 3600;
+            console.log('En '+horas+' horas, hay '+segundos+' segundos');
+            //2. pasar de grados celcius a fahrenheit
+            var grados_celcius = 30;
+            var grados_f = grados_celcius * 9/5 + 32;
+            console.log(grados_celcius+' grados celcius equivalen a '+grados_f+' grados fahrenheit')
+        </script>
+
+        <script>
+            function convertidor(grados_ce){
+                var grados_fa = grados_ce * 9/5 + 32;
+                return grados_fa;
+            }
+            console.log(convertidor(40));
+            console.log(convertidor(35));
+            console.log(convertidor(70));
+            console.log(convertidor(10));
+        </script>
+
+        <script>
+            var distancia = 200;
+            if(distancia > 100){
+                console.log('lejos');
+            }
+
+            var condicion = distancia == 200;
+            console.log(condicion);
+        </script>
+
+        <script>
+            var es_fumador = true;
+            var es_deportista = false;
+            //Operador And "y" &&
+            console.log('result '+ (es_fumador && es_deportista));
+            //Operador Or "o" ||
+            console.log(es_fumador || es_deportista);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+</head>
+<body>
+    <script>
+        var num = 1;
+        while(num <= 10){
+            num++;
+            if (num == 5) {
+                continue
+                /*El continue se salta el numero, hace que se evalue
+                de nuevo el while, el continue tambien se puede usar en for
+                */
+            }
+            console.log(num);
+        }
+    
+        var listado = [1,2,3,4,5]; 
+        console.log(listado);
+        var listado2 = new Array(1,2,3,4,5);
+        console.log(listado2);
+
+        var a = listado[2];
+        console.log(a);
+
+        listado2[4] = 500;
+        console.log(listado2);
+
+        //se puede crear una variable sin la palabra clave var
+        listado3 = ['hola', 123, false, listado];
+        console.log(listado3);
+
+        //Push y Pop
+        var lista = ['a', 'b', 'c'];
+        console.log(lista);
+
+        //insertar elemento al final
+        lista.push('d', 1, 2);
+        console.log(lista);
+
+        //remover ultimo elemento
+        lista.pop();
+        lista.pop();
+        console.log(lista);
+
+
+        //Splice, agregar o eliminar uno o mas elementos en cualquier indice
+
+        var lista1 = ['a','b','c'];
+        console.log(lista1);
+        lista1.splice(1, 0, 'a1','a2','a3')//inserta en la posicion 1, elimina 0 y agrega a1,a2,a3
+        console.log(lista1);
+        lista1.splice(2,3);//elimina 3 elemntos desde la posicion 2
+        console.log(lista1);
+
+        //Otra forma de manejar el indice
+        var lista2 = [1,2,3,4,5,6];
+        console.log(lista2);
+        lista2.splice(-3, 2);//de derecha a izquierda se cuenta el indice
+        console.log(lista2);
+
+
+        //Matriz
+        var grilla = [[1,2,3],[4,5,6],[7,8,9]];//3 filas
+        console.log(grilla);
+
+        console.log(grilla[1][1]);
+        console.log(grilla[2][0]);
+
+
+
+        //Objetos en javascript
+        var obj = new Object();
+
+        //escribir valores en las propiedades
+        obj.nombre = "Robinson";
+        obj["edad"] = 29;
+
+        console.log(obj.nombre);
+        console.log(obj["nombre"]);
+        console.log(obj.edad);
+        console.log(obj["edad"]);
+
+
+        //metodos
+        obj.sumar = function(x, y){
+            return x+y;
+        }
+
+        var a = obj.sumar(1,10);
+        console.log(a);
+
+        //Otra forma de crear objetos es la siguiente
+        var usuario = {
+            nombre:"Juan",
+            edad:25,
+            pais:"Chile",
+            mascotas:["perro","gato","loro"],
+            perfil:{
+                tipo:"privado",
+                cuenta:"premium",
+                saldo:200000
+            }
+        }
+
+        console.log(usuario);
+        console.log(usuario.mascotas);
+        console.log(usuario.perfil.saldo);
+
+        //Undefined, no definido
+        console.log(usuario.ciudad);
+
+        if(!usuario.ciudad){// undefined se puede leer como falso y lo podemos negar con !
+            console.log('hola');
+        }
+
+        if('ciudad' in usuario){//preguntamos si el usuario tiene la propiedad
+            console.log("el usuario tiene ciudad");
+        }else{
+            console.log("el usuario no tiene ciudad");
+        }
+
+
+    </script>
+</body>
+</html>>
