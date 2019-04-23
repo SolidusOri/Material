@@ -353,3 +353,13 @@ identifica({});
 identifica(nico);
 identifica(1);
 identifica('1');
+
+/* ejemplo */
+function Player() {
+    nom : 'robin'
+}
+
+var yo = new Player();
+
+console.log(yo instanceof Player);
+console.log(typeof yo == "object");
