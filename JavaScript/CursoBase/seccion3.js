@@ -139,3 +139,72 @@ crearProductoCamisa(150);
 
 
 /* ----------------------------------------------------------------------- */
+/* polimorfismo */
+function determinaDato(a) {
+    if (a === undefined) {
+        console.log('A es undefined... no se que hacer');
+    } else if (typeof a === 'number') {
+        console.log('A es un numero');
+    } else if (typeof a === 'string') {
+        console.log('A es un texto');
+    } else if (typeof a === 'object') {
+        console.log('A es un objeto.. pero puede ser cualquier cosa');
+        if (a instanceof Number) {
+            console.log('A es un objeto numero');
+        }
+    }
+}
+
+var b = new Number(3);
+determinaDato(b);
+/* --------------------------------------------------------------------- */
+
+
+
+
+/* --------------------------------------------------------------------- */
+/* Cuidado con el contexto de las funciones */
+function crearFunciones() {
+    var lista = [];
+    var num = 1;
+
+    for (var num = 1; num <= 5; num++) {
+        lista.push(
+            /* function anonima que se ejecuta en el momento */
+            (function(num) {
+                return function() {
+                    console.log(num);
+                }
+            })(num)
+        );
+    }
+
+    return lista;
+}
+
+var funciones = crearFunciones();
+funciones[0]();
+funciones[1]();
+funciones[2]();
+funciones[3]();
+funciones[4]();
+/* --------------------------------------------------------------------- */
+
+
+
+
+/* --------------------------------------------------------------------- */
+/* obj Number */
+var a = 10;
+var b = new Number(10);
+console.log(a === b); /* comparo valor y obj */
+console.log(a == b); /* comparo solo valor */
+
+a = 10.456789;
+console.log(a.toFixed(2)); /* 10.46 */
+
+console.log(a.toString()); /* valor textual de a */
+
+console.log(a.toPrecision(4));
+
+/* ----------------------------------------------------------------------- */
