@@ -213,6 +213,84 @@ console.log(a.toPrecision(4));
 
 
 /* ----------------------------------------------------------------------- */
+/* Boolean */
+
+var x = true;
+var y  = false;
+
+/* al no indicar un valor como parametro el boolean se inicia en false, si indicamos un texto este se inicia como true, 1 es true 0 es false */
+var z = new Boolean(); /* esto es false */
+
+if(z){
+    console.log("Hola");
+}
+
+/* hay que tener cuidado con esto porque el onj z al no revibir parametro es un objeto boolean con un valor primitivo de false, al poner la z en el if lo que se evalua es que si z es un objeto, no se esta evaluando el valor primitivo del obj z para evaluar el valor esta el z.valueOf() */
+/* ------------------------------------------------------------------------ */
+
+
+
+
+/* ------------------------------------------------------------------------ */
+/* obj string */
+var nomMujer = 'juana';
+var miNom = new String('Robinson Allendes');
+console.log(miNom);/* este obj tiene propiedades con la posicion y el valor de cada caracter del texto */
+
+console.log(miNom.toUpperCase());
+console.log(miNom.toLowerCase());
+
+/* el parametro es un string no un caracter, se puede poner una palabra */
+var i = miNom.indexOf('o'); /* regresa la posicion de la primera o del texto */
+console.log(i);
+i = miNom.lastIndexOf('o');
+console.log(i); /* regresa la posicion de la ultima o del texto */
+
+var nombre = miNom.substr(0, miNom.indexOf(' ')); /* corta hasta el espacio */
+console.log(nombre);
+
+var split = miNom.split(' '); /* al no indicar parametro crea un arreglo con el texto */
+console.log(split);
+console.log(split.length);
+/* ------------------------------------------------------------------------- */
+
+
+
+
+/* ------------------------------------------------------------------------- */
+/* Obj Date */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
