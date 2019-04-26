@@ -216,12 +216,12 @@ console.log(a.toPrecision(4));
 /* Boolean */
 
 var x = true;
-var y  = false;
+var y = false;
 
 /* al no indicar un valor como parametro el boolean se inicia en false, si indicamos un texto este se inicia como true, 1 es true 0 es false */
 var z = new Boolean(); /* esto es false */
 
-if(z){
+if (z) {
     console.log("Hola");
 }
 
@@ -235,7 +235,7 @@ if(z){
 /* obj string */
 var nomMujer = 'juana';
 var miNom = new String('Robinson Allendes');
-console.log(miNom);/* este obj tiene propiedades con la posicion y el valor de cada caracter del texto */
+console.log(miNom); /* este obj tiene propiedades con la posicion y el valor de cada caracter del texto */
 
 console.log(miNom.toUpperCase());
 console.log(miNom.toLowerCase());
@@ -259,38 +259,77 @@ console.log(split.length);
 
 /* ------------------------------------------------------------------------- */
 /* Obj Date */
+var g = new Date(); /* fecha actual */
+var h = new Date(); /* constructor de fecha en milisegundos */
+var j = new Date(1988, 10, 15, 23, 59, 59, 999); /* define la fecha completa */
+
+
+var e = new Date().getTime();
+
+for (var m = 0; m < 10; m++) {
+    console.log('Hola');
+}
+
+var f = new Date().getTime();
+
+var time = f - e;
+console.log('tiempo en milisegundos ', time);
+console.log('tiempo en segundos ', time / 1000);
+
+console.log(j.getFullYear());
+console.log(j.getTime());
+
+
+/* manejo de fechas, sumas, restas */
+var fecha = new Date(2019, 3, 26);
+console.log(fecha);
+
+/* set dias, esta para los demas, si no pasamos en los dias del mes pasa al siguiente mes */
+fecha.setDate(10);
+console.log(fecha);
+
+/* modificamos el prototipo , creamos un proto*/
+Date.prototype.sumarDias = function(dias) {
+    this.setDate(this.getDate() + dias);
+    return this;
+}
+
+console.log(fecha);
+console.log(fecha.sumarDias(10)); /* este prototipo sumaria los dias */
+
+/* ---------------------------------------------------------------------- */
 
 
 
 
+/* ---------------------------------------------------------------------- */
+/* Math */
+
+/* en javascript no hay constantes */
+var PI = Math.PI;
+
+console.log(PI);
+
+var num1 = 10.456789;
+console.log(num1);
+
+/* se podria crear un prototipo para esto */
+console.log(Math.round(num1 * 100) / 100); /* num1 * 100 para obtener los 2 decimales, en javascript el raound solo recibe el numero a redondear, dividido por 100 para tener el valor con decimal */
+
+console.log(Math.floor(num1)); /* quita todos los decimales */
+
+function randomEntre(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+console.log(randomEntre(5, 10)); /* esto popria ser un protoripo */
+
+console.log(Math.sqrt(4)); /* raiz cuadrada */
+
+console.log(Math.pow(5, 3)); /* 5*5*5 */
+
+/* ----------------------------------------------------------------------- */
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ----------------------------------------------------------------------- */
+/* expleciones regulares */
