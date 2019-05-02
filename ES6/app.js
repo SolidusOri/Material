@@ -15,12 +15,11 @@ console.log(texto);
  */
 const IMPUESTO_SV = 15.25;
 
-
 //nuevas funciones ES6 (startsWith(), endsWith(), includes())
 
 var saludo = 'Hola Mundo';
 //desde la posicion 0 corta 1
-console.log(saludo.substr(0, 1) === 'h');
+console.log(saludo.substr(0, 1) === 'h'); /* false */
 
 /* Retorna true o false indicando si el string comienza con el string entregado por parametro, tambien admite un segundo argumento el cual seria el inicio para la validacion*/
 console.log(saludo.startsWith('Ho'));
@@ -45,7 +44,7 @@ let nombres = ['Robinson', 'Denisse', 'Agata'];
 let telefonos = [12478965, 78547555, 98634856];
 
 //rellena con espacios el nombre hasta llegar a 12 caracteres
-for (i in nombres) {
+for (let i in nombres) {
     let diferencia = ESPACIOS - nombres[i].length;
     console.log(nombres[i] + " ".repeat(diferencia) + "|" + telefonos[i]);
 }
@@ -78,7 +77,7 @@ function dameNombre() {
 let nombreCompleto3 = `El nombre completo es ${dameNombre()} ${1+2}`;
 console.log(nombreCompleto3);
 
-/* Con los templetes literales no rompemos el string con la mezcla de comillas simples y dobles como se ve en la clase el h1, el salto de linea es literal xd, este salto de linea es contado como caracter */
+/* Con los templetes literales no rompemos el string con la mezcla de comillas simples y dobles como se ve en la clase el h1, el salto de linea es literal xd, este salto de linea es contado como caracter al ver el largo del string */
 let multilinea = `<h1 class="algunaClase">titulo</h1>
 <p>parrafo</p>
 I'm robinson`;
