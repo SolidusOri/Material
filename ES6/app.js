@@ -82,8 +82,12 @@ let multilinea = `<h1 class="algunaClase">titulo</h1>
 <p>parrafo</p>
 I'm robinson`;
 console.log(multilinea);
+/* -------------------------------------------------------------------- */
 
 
+
+
+/* -------------------------------------------------------------------- */
 /** Toda funcion en javascript retorna algo, y toda funcion aunque no tenga parametros explicitos siempre recibe algo, esto llega a un objeto llamado arguments */
 
 //se puede renombrar lo que viene en el arguments
@@ -106,13 +110,55 @@ function etiqueta(literales, ...substituciones) {
 let unidades = 5,
     costo_unitario = 10;
 
+/* la funcion etiqueta(tags) evalua el templete literal y lo puede cambiar antes de la construccion del texto */
 let mensaje2 = etiqueta `${unidades} uni. de lapices cuestan $${unidades*costo_unitario} pesos.`;
 
 console.log(mensaje2);
+/* --------------------------------------------------------------------- */
 
+
+
+
+/* ------------------------------------------------------------------------- */
 //valores en crudo en mensaje4
+
+/* el valor en crudo muestra el texto tal cual como es, con todos los caracteres, en este caso el raw es un tags y solo funciona con los templetes literales*/
 let mensaje3 = `hola \nmundo\\`;
 let mensaje4 = String.raw `hola \nmundo\\`;
 
 console.log(mensaje3);
 console.log(mensaje4);
+/* ------------------------------------------------------------------------- */
+
+
+
+
+/* ------------------------------------------------------------------------- */
+/* Parametros por defecto, opcionales */
+
+/* en es6 se puede indicar un valor por defecto en caso de que el parametro no venga, estos parametros opcionales deben ir al final, esto parametros por defecto pueden ser funciones, objetos, etc, tanto explicitos como explicitos */
+function saludos(mensaje = 'mensaje defecto', tiempo = 2000, fn = fnDefecto) {
+
+    /* en ES5 habia que validar de estas formas */
+    //mensaje = mensaje || 'Hola Mundo';
+    //mensaje = (typeof mensaje !== 'undefined') ? mensaje : 'Hola Mundo';
+
+    setTimeout(function() {
+        console.log(mensaje);
+    }, tiempo);
+
+    fn();
+}
+
+function fnDefecto() {
+    console.log('Soy una funcion por defecto');
+}
+
+saludos();
+
+/* arguments es afectado cuando las funciones tienen parametros opcionales, en este caso arguments es un arreglo vacio */
+function sumar(a = 1, b = 2) {
+    console.log(arguments);
+}
+
+sumar();
