@@ -133,32 +133,3 @@ console.log(mensaje4);
 
 
 
-/* ------------------------------------------------------------------------- */
-/* Parametros por defecto, opcionales */
-
-/* en es6 se puede indicar un valor por defecto en caso de que el parametro no venga, estos parametros opcionales deben ir al final, esto parametros por defecto pueden ser funciones, objetos, etc, tanto explicitos como explicitos */
-function saludos(mensaje = 'mensaje defecto', tiempo = 2000, fn = fnDefecto) {
-
-    /* en ES5 habia que validar de estas formas */
-    //mensaje = mensaje || 'Hola Mundo';
-    //mensaje = (typeof mensaje !== 'undefined') ? mensaje : 'Hola Mundo';
-
-    setTimeout(function() {
-        console.log(mensaje);
-    }, tiempo);
-
-    fn();
-}
-
-function fnDefecto() {
-    console.log('Soy una funcion por defecto');
-}
-
-saludos();
-
-/* arguments es afectado cuando las funciones tienen parametros opcionales, en este caso arguments es un arreglo vacio */
-function sumar(a = 1, b = 2) {
-    console.log(arguments);
-}
-
-sumar();
