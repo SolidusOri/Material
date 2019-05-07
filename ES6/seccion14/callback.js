@@ -7,15 +7,15 @@ const getUsuarioById = (id, callback) => {
     };
 
     /* en este caso el callback espera a que llegue el usuario de base de datos */
-    if(id === 20){
+    if (id === 20) {
         callback(`no existe el usuario con el id ${id}`);
-    }else{
+    } else {
         callback(null, usuario);
     }
 };
 
-getUsuarioById(1, (err, usuario) =>{
-    if(err){
+getUsuarioById(1, (err, usuario) => {
+    if (err) {
         return console.log(err);
     }
     console.log('Usuario de base de datos', usuario);
